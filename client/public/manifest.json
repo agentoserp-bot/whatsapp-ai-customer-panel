@@ -1,0 +1,17 @@
+{
+  "name": "WhatsApp AI Panel",
+  "short_name": "WA AI Panel",
+  "description": "Painel de atendimento via WhatsApp com IA treinável",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#22c55e",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
