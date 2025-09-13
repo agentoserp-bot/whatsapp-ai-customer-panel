@@ -1,0 +1,36 @@
+{
+  "name": "whatsapp-ai-customer-panel",
+  "version": "1.0.0",
+  "description": "🤖 Painel completo de atendimento via WhatsApp com IA treinável",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "cd server && npm run dev",
+    "client:dev": "cd client && npm run dev",
+    "build": "npm run install:all && cd client && npm run build",
+    "build:prod": "NODE_ENV=production npm run install:all && cd client && npm run build",
+    "start": "cd server && npm start",
+    "start:prod": "cd server && NODE_ENV=production npm start",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "vercel-build": "npm run install:all && cd client && npm run build",
+    "deploy:vercel": "vercel --prod",
+    "deploy:preview": "vercel",
+    "preview": "cd client && npm run preview",
+    "test:prod": "npm run build:prod && npm run start:prod",
+    "setup:deploy": "cd deploy && npm install"
+  },
+  "keywords": ["whatsapp", "ai", "chatbot", "supabase", "nodejs", "react", "vercel", "customer-support"],
+  "author": "WhatsApp AI Customer Panel",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agentoserp-bot/whatsapp-ai-customer-panel.git"
+  },
+  "engines": {
+    "node": "22.x",
+    "npm": ">=8.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
